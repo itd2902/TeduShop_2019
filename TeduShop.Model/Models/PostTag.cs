@@ -7,13 +7,14 @@ namespace TeduShop.Model.Models
     public class PostTag
     {
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [Column(Order =1)]
         public int PostId { get; set; }
 
         [ForeignKey("PostId")]
         public virtual Post Post { get; set; }
 
         [Key]
+        [Column(Order =2)]
         [MaxLength(50)]
         public string TagId { get; set; }
 

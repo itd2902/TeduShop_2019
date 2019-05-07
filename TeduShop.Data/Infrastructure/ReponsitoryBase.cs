@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace TeduShop.Data.Infrastructure
 {
-    public abstract class ReponsitoryBase<T> where T:class
+    public abstract class ReponsitoryBase<T>:IReponsitory<T> where T:class
     {
         #region Properties
         private TeduShopDbContext dataContext;
@@ -43,7 +43,7 @@ namespace TeduShop.Data.Infrastructure
         {
             dbSet.Remove(entity);
         }
-        public virtual void DeleteMutil(Expression<Func<T,bool>> where)
+        public virtual void DeleteMulti(Expression<Func<T,bool>> where)
         {
             IEnumerable<T> objects = dbSet.Where<T>(where).AsEnumerable();
             foreach(T obj in objects)
@@ -76,7 +76,7 @@ namespace TeduShop.Data.Infrastructure
             }
             return dataContext.Set<T>().AsQueryable();
         }
-        public T GetSingleByCondition(Expression<Func<T,bool>> expression,string[] includes=null)
+        public T GetSingByCondition(Expression<Func<T,bool>> expression,string[] includes=null)
         {
             return GetAll(includes).FirstOrDefault(expression);
         }

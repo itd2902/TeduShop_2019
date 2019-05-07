@@ -7,7 +7,8 @@ namespace TeduShop.Data
     {
         public TeduShopDbContext() : base("TeduShopDbContext")
         {
-            this.Configuration.LazyLoadingEnabled = false;//load bảng cha không tự động load bảng con
+            
+            //Configuration.LazyLoadingEnabled = false;//load bảng cha không tự động load bảng con
         }
 
         public DbSet<Footer> Footers { get; set; }

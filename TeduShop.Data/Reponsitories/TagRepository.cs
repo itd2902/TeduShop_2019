@@ -8,7 +8,11 @@ using TeduShop.Model.Models;
 
 namespace TeduShop.Data.Reponsitories
 {
-    public class TagRepository:ReponsitoryBase<Tag>
+    public interface ITagRepository : IReponsitory<Tag>
+    {
+
+    }
+    public class TagRepository:ReponsitoryBase<Tag>, ITagRepository
 
     {
         public TagRepository(DbFactory dbFactory):base(dbFactory)

@@ -7,11 +7,11 @@ using TeduShop.Model.Models;
 namespace TeduShop.Data.Reponsitories
 {
     //add define interface not in IRepository
-    public interface IProductCategoryRepository
+    public interface IProductCategoryRepository:IReponsitory<ProductCategory>
     {
         IEnumerable<ProductCategory> GetByAlias(string alias);
     }
-    public class ProductCategoryRepository : ReponsitoryBase<Product>, IProductCategoryRepository
+    public class ProductCategoryRepository : ReponsitoryBase<ProductCategory>, IProductCategoryRepository
     {
         
         public ProductCategoryRepository(IDbFactory dbFactory) 

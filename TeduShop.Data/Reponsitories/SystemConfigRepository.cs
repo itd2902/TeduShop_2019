@@ -8,7 +8,11 @@ using TeduShop.Model.Models;
 
 namespace TeduShop.Data.Reponsitories
 {
-    public class SystemConfigRepository:ReponsitoryBase<SystemConfig>
+    public interface ISystemConfigRepository : IReponsitory<SystemConfig>
+    {
+
+    }
+    public class SystemConfigRepository:ReponsitoryBase<SystemConfig>, ISystemConfigRepository
     {
         public SystemConfigRepository(DbFactory dbFactory):base(dbFactory)
         {

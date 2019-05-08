@@ -120,6 +120,12 @@ namespace TeduShop.Data.Infrastructure
         {
             return dataContext.Set<T>().Count<T>(predicate) > 0;
         }
+
+        public virtual void Delete(int id)
+        {
+            var entity = dbSet.Find(id);
+            dbSet.Remove(entity);
+        }
         #endregion
     }
 }

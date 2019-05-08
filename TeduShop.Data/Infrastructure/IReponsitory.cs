@@ -16,7 +16,7 @@ namespace TeduShop.Data.Infrastructure
 
         //Delete
         void Delete(T entity);
-
+        void Delete(int id);
         //Delete multi records
         void DeleteMulti(Expression<Func<T, bool>> where);
 
@@ -25,7 +25,7 @@ namespace TeduShop.Data.Infrastructure
 
         T GetSingByCondition(Expression<Func<T, bool>> expression, string[] includes = null);
 
-        IQueryable<T> GetAll(string[] includes);
+        IQueryable<T> GetAll(string[] includes=null);
 
         IQueryable<T> GetMulti(Expression<Func<T, bool>> predicate, string[] includes = null);
 

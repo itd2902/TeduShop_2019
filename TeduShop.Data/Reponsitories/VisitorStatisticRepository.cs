@@ -8,7 +8,11 @@ using TeduShop.Model.Models;
 
 namespace TeduShop.Data.Reponsitories
 {
-    public class VisitorStatisticRepository:ReponsitoryBase<VisitorStatistic>
+    public interface IVisitorStatisticRepository : IReponsitory<VisitorStatistic>
+    {
+
+    }
+    public class VisitorStatisticRepository:ReponsitoryBase<VisitorStatistic>,IVisitorStatisticRepository
     {
         public VisitorStatisticRepository(DbFactory dbFactory):base(dbFactory)
         {

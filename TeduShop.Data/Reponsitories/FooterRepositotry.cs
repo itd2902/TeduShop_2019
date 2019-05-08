@@ -8,7 +8,11 @@ using TeduShop.Model.Models;
 
 namespace TeduShop.Data.Reponsitories
 {
-    public class FooterRepositotry:ReponsitoryBase<Footer>
+    public interface IFooterRepositotry : IReponsitory<Footer>
+    {
+
+    }
+    public class FooterRepositotry:ReponsitoryBase<Footer>,IFooterRepositotry
     {
         public FooterRepositotry(DbFactory dbFactory):base(dbFactory)
         {

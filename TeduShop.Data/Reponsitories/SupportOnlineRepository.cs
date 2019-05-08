@@ -7,7 +7,11 @@ using TeduShop.Data.Infrastructure;
 using TeduShop.Model.Models;
 namespace TeduShop.Data.Reponsitories
 {
-    public class SupportOnlineRepository:ReponsitoryBase<SupportOnline>
+    public interface ISupportOnlineRepository : IReponsitory<SupportOnline>
+    {
+
+    }
+    public class SupportOnlineRepository:ReponsitoryBase<SupportOnline>, ISupportOnlineRepository
     {
         public SupportOnlineRepository(DbFactory dbFactory):base(dbFactory)
         {

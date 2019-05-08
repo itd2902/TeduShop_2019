@@ -8,7 +8,11 @@ using TeduShop.Model.Models;
 
 namespace TeduShop.Data.Reponsitories
 {
-    public class PageRepository:ReponsitoryBase<Page>
+    public interface IPageRepository : IReponsitory<Page>
+    {
+
+    }
+    public class PageRepository:ReponsitoryBase<Page>,IPageRepository
     {
         public PageRepository(DbFactory dbFactory):base(dbFactory)
         {

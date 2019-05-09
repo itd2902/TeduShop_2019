@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 
@@ -9,14 +10,14 @@ namespace TeduShop.Data.Infrastructure
         //Định nghĩa ra các phương thức sẽ sử dụng lại nhiều lần như thêm sửa xóa
 
         //Add entites
-        void Add(T entity);
+        T Add(T entity);
 
         //Update
         void Update(T entity);
 
         //Delete
-        void Delete(T entity);
-        void Delete(int id);
+        T Delete(T entity);
+        T Delete(int id);
         //Delete multi records
         void DeleteMulti(Expression<Func<T, bool>> where);
 
@@ -25,11 +26,11 @@ namespace TeduShop.Data.Infrastructure
 
         T GetSingByCondition(Expression<Func<T, bool>> expression, string[] includes = null);
 
-        IQueryable<T> GetAll(string[] includes=null);
+        IEnumerable<T> GetAll(string[] includes=null);
 
-        IQueryable<T> GetMulti(Expression<Func<T, bool>> predicate, string[] includes = null);
+        IEnumerable<T> GetMulti(Expression<Func<T, bool>> predicate, string[] includes = null);
 
-        IQueryable<T> GetMultiPaging(Expression<Func<T, bool>> filter, out int total, int index = 0, int size = 50, string[] includes = null);
+        IEnumerable<T> GetMultiPaging(Expression<Func<T, bool>> filter, out int total, int index = 0, int size = 50, string[] includes = null);
 
         int Count(Expression<Func<T, bool>> where);
 

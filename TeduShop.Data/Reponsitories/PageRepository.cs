@@ -14,7 +14,7 @@ namespace TeduShop.Data.Reponsitories
     }
     public class PageRepository:ReponsitoryBase<Page>,IPageRepository
     {
-        public PageRepository(DbFactory dbFactory):base(dbFactory)
+        public PageRepository(IDbFactory dbFactory):base(dbFactory)
         {
 
         }

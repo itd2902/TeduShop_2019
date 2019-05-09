@@ -13,7 +13,7 @@ namespace TeduShop.Data.Reponsitories
     }
     public class SupportOnlineRepository:ReponsitoryBase<SupportOnline>, ISupportOnlineRepository
     {
-        public SupportOnlineRepository(DbFactory dbFactory):base(dbFactory)
+        public SupportOnlineRepository(IDbFactory dbFactory):base(dbFactory)
         {
 
         }

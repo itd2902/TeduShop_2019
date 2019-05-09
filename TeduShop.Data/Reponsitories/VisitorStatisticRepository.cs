@@ -14,7 +14,7 @@ namespace TeduShop.Data.Reponsitories
     }
     public class VisitorStatisticRepository:ReponsitoryBase<VisitorStatistic>,IVisitorStatisticRepository
     {
-        public VisitorStatisticRepository(DbFactory dbFactory):base(dbFactory)
+        public VisitorStatisticRepository(IDbFactory dbFactory):base(dbFactory)
         {
 
         }

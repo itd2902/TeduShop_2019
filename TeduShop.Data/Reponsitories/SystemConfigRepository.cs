@@ -14,7 +14,7 @@ namespace TeduShop.Data.Reponsitories
     }
     public class SystemConfigRepository:ReponsitoryBase<SystemConfig>, ISystemConfigRepository
     {
-        public SystemConfigRepository(DbFactory dbFactory):base(dbFactory)
+        public SystemConfigRepository(IDbFactory dbFactory):base(dbFactory)
         {
 
         }

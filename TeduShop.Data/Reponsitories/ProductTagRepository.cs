@@ -14,7 +14,7 @@ namespace TeduShop.Data.Reponsitories
     }
     public class ProductTagRepository:ReponsitoryBase<ProductTag>, IProductTagRepository
     {
-        public ProductTagRepository(DbFactory dbFactory):base(dbFactory)
+        public ProductTagRepository(IDbFactory dbFactory):base(dbFactory)
         {
 
         }

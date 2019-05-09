@@ -14,7 +14,7 @@ namespace TeduShop.Data.Reponsitories
     }
     public class ManuGroupRepository: ReponsitoryBase<ManuGroup>,IManuGroupRepository
     {
-        public ManuGroupRepository(DbFactory dbFactory):base(dbFactory)
+        public ManuGroupRepository(IDbFactory dbFactory):base(dbFactory)
         {
 
         }

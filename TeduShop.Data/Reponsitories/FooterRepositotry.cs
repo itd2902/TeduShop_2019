@@ -14,7 +14,7 @@ namespace TeduShop.Data.Reponsitories
     }
     public class FooterRepositotry:ReponsitoryBase<Footer>,IFooterRepositotry
     {
-        public FooterRepositotry(DbFactory dbFactory):base(dbFactory)
+        public FooterRepositotry(IDbFactory dbFactory):base(dbFactory)
         {
 
         }

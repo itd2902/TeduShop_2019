@@ -55,9 +55,9 @@
     <Compile Include="Infrastructure\IUnitOfWork.cs" />
     <Compile Include="Infrastructure\ReponsitoryBase.cs" />
     <Compile Include="Infrastructure\UnitOfWork.cs" />
-    <Compile Include="Migrations\201905070727276_InitDatabase.cs" />
-    <Compile Include="Migrations\201905070727276_InitDatabase.Designer.cs">
-      <DependentUpon>201905070727276_InitDatabase.cs</DependentUpon>
+    <Compile Include="Migrations\201905090735117_updatedatabase.cs" />
+    <Compile Include="Migrations\201905090735117_updatedatabase.Designer.cs">
+      <DependentUpon>201905090735117_updatedatabase.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -91,8 +91,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201905070727276_InitDatabase.resx">
-      <DependentUpon>201905070727276_InitDatabase.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201905090735117_updatedatabase.resx">
+      <DependentUpon>201905090735117_updatedatabase.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

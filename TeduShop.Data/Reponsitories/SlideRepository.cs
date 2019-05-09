@@ -10,7 +10,7 @@ namespace TeduShop.Data.Reponsitories
     }
     public class SlideRepository : ReponsitoryBase<Slide>, ISlideRepository
     {
-        public SlideRepository(DbFactory dbFactory):base(dbFactory)
+        public SlideRepository(IDbFactory dbFactory):base(dbFactory)
         {
 
         }

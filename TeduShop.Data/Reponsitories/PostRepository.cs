@@ -12,7 +12,7 @@ namespace TeduShop.Data.Reponsitories
 
     public class PostRepository : ReponsitoryBase<Post>, IPostRepository
     {
-        public PostRepository(DbFactory dbFactory) : base(dbFactory)
+        public PostRepository(IDbFactory dbFactory) : base(dbFactory)
         {
         }
 

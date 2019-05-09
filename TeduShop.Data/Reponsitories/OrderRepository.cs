@@ -14,7 +14,7 @@ namespace TeduShop.Data.Reponsitories
     }
     public class OrderRepository:ReponsitoryBase<Order>, IOrderRepository
     {
-        public OrderRepository(DbFactory dbFactory):base(dbFactory)
+        public OrderRepository(IDbFactory dbFactory):base(dbFactory)
         {
 
         }

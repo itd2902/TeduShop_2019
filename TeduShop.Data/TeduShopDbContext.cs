@@ -28,6 +28,7 @@ namespace TeduShop.Data
         public DbSet<SystemConfig> SystemConfigs { get; set; }
         public DbSet<Page> Pages { get; set; }
         public DbSet<ProductTag> ProductTags { get; set; }
+        public DbSet<Error> Errors { get; set; }
         //method
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

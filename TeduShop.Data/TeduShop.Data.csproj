@@ -59,8 +59,13 @@
     <Compile Include="Migrations\201905090735117_updatedatabase.Designer.cs">
       <DependentUpon>201905090735117_updatedatabase.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201905090925292_addTblError.cs" />
+    <Compile Include="Migrations\201905090925292_addTblError.Designer.cs">
+      <DependentUpon>201905090925292_addTblError.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reponsitories\ErrorRepository.cs" />
     <Compile Include="Reponsitories\FooterRepositotry.cs" />
     <Compile Include="Reponsitories\ManuRepository.cs" />
     <Compile Include="Reponsitories\ManuGroupRepository.cs" />
@@ -93,6 +98,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201905090735117_updatedatabase.resx">
       <DependentUpon>201905090735117_updatedatabase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905090925292_addTblError.resx">
+      <DependentUpon>201905090925292_addTblError.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

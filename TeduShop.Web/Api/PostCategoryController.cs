@@ -1,9 +1,12 @@
-﻿using System.Net;
+﻿using AutoMapper;
+using System.Collections.Generic;
+using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using TeduShop.Model.Models;
 using TeduShop.Service;
 using TeduShop.Web.Infrastruture.Core;
+using TeduShop.Web.Models.ViewModels;
 
 namespace TeduShop.Web.Api
 {
@@ -19,8 +22,8 @@ namespace TeduShop.Web.Api
         }
 
         //Post
-
-        public HttpResponseMessage Post(HttpRequestMessage request, PostCategory postCategory)
+        [Route("create")]
+        public HttpResponseMessage Post(HttpRequestMessage request, PostCategoryViewModel postCategoryViewModel)
         {
             return CreateHttpResponse(request, () =>
             {
@@ -31,16 +34,18 @@ namespace TeduShop.Web.Api
                 }
                 else
                 {
-                    var category = _postCategoryService.Add(postCategory);
+                    var postCategory = Mapper.Map<PostCategory>(postCategoryViewModel);
+                    postCategory = _postCategoryService.Add(postCategory);
                     _postCategoryService.SaveChange();
-                    response = request.CreateResponse(HttpStatusCode.Created, category);
+                    response = request.CreateResponse(HttpStatusCode.Created, postCategory);
                 }
                 return response;
             });
         }
 
         //Put
-        public HttpResponseMessage Put(HttpRequestMessage request, PostCategory postCategory)
+        [Route("update")]
+        public HttpResponseMessage Put(HttpRequestMessage request, PostCategoryViewModel postCategoryViewModel)
         {
             return CreateHttpResponse(request, () =>
             {
@@ -51,6 +56,7 @@ namespace TeduShop.Web.Api
                 }
                 else
                 {
+                    var postCategory = Mapper.Map<PostCategory>(postCategoryViewModel);
                     _postCategoryService.Update(postCategory);
                     _postCategoryService.SaveChange();
                     response = request.CreateResponse(HttpStatusCode.OK);
@@ -60,6 +66,7 @@ namespace TeduShop.Web.Api
         }
 
         //Delete
+        [Route("delete")]
         public HttpResponseMessage Delete(HttpRequestMessage request, int id)
         {
             return CreateHttpResponse(request, () =>
@@ -85,8 +92,10 @@ namespace TeduShop.Web.Api
         {
             return CreateHttpResponse(request, () =>
             {
+
                 var lstCategory = _postCategoryService.GetAll();
-                HttpResponseMessage response = request.CreateResponse(HttpStatusCode.OK, lstCategory);
+                var lstCategoryViewModel = Mapper.Map<IEnumerable<PostCategoryViewModel>>(lstCategory);
+                HttpResponseMessage response = request.CreateResponse(HttpStatusCode.OK, lstCategoryViewModel);
                 return response;
             });
         }

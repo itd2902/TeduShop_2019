@@ -1,5 +1,7 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Linq;
 
 namespace TeduShop.Model.Models
 {
@@ -15,5 +17,7 @@ namespace TeduShop.Model.Models
 
         [MaxLength(50)]
         public string Type { get; set; }
+
+        public IEnumerable<PostTag> PostTags { get; set; }
     }
 }

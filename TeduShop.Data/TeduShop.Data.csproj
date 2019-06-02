@@ -9,9 +9,10 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>TeduShop.Data</RootNamespace>
     <AssemblyName>TeduShop.Data</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -36,6 +37,12 @@
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.2\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.2\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -62,6 +69,14 @@
     <Compile Include="Migrations\201905090925292_addTblError.cs" />
     <Compile Include="Migrations\201905090925292_addTblError.Designer.cs">
       <DependentUpon>201905090925292_addTblError.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905311537256_AddIdentity.cs" />
+    <Compile Include="Migrations\201905311537256_AddIdentity.Designer.cs">
+      <DependentUpon>201905311537256_AddIdentity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906020303284_ChangeKeyAndAddSeed.cs" />
+    <Compile Include="Migrations\201906020303284_ChangeKeyAndAddSeed.Designer.cs">
+      <DependentUpon>201906020303284_ChangeKeyAndAddSeed.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -101,6 +116,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201905090925292_addTblError.resx">
       <DependentUpon>201905090925292_addTblError.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905311537256_AddIdentity.resx">
+      <DependentUpon>201905311537256_AddIdentity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906020303284_ChangeKeyAndAddSeed.resx">
+      <DependentUpon>201906020303284_ChangeKeyAndAddSeed.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -183,6 +183,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\Startup.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -208,6 +209,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="bower.json" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -219,6 +221,10 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\plugin\bower_components\angular\angular-csp.css" />
+    <Content Include="Scripts\plugin\bower_components\angular\angular.js" />
+    <Content Include="Scripts\plugin\bower_components\angular\angular.min.js" />
+    <Content Include="Scripts\plugin\bower_components\angular\index.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -227,13 +233,20 @@
       <DependentUpon>Web.config</DependentUpon>
     </Content>
     <Content Include="Views\Web.config" />
+    <Content Include="Scripts\plugin\bower_components\angular\.bower.json" />
+    <Content Include="Scripts\plugin\bower_components\angular\angular.min.js.gzip" />
+    <Content Include="Scripts\plugin\bower_components\angular\angular.min.js.map" />
+    <Content Include="Scripts\plugin\bower_components\angular\bower.json" />
+    <Content Include="Scripts\plugin\bower_components\angular\LICENSE.md" />
+    <Content Include="Scripts\plugin\bower_components\angular\package.json" />
+    <Content Include="Scripts\plugin\bower_components\angular\README.md" />
+    <Content Include="Views\Admin\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Assets\admin\" />
     <Folder Include="Assets\client\" />
     <Folder Include="Infrastruture\Extension\" />
-    <Folder Include="Scripts\plugin\" />
     <Folder Include="Scripts\spa\" />
   </ItemGroup>
   <ItemGroup>

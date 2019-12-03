@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace TeduShop.Data.Infrastructure
 {
@@ -20,7 +16,7 @@ namespace TeduShop.Data.Infrastructure
         }
         private void Dispose(bool disposing)
         {
-            if(!isDisposed && disposing)
+            if (!isDisposed && disposing)
             {
                 DisposeCore();
             }

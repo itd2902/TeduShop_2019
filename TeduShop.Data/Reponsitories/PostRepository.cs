@@ -18,12 +18,12 @@ namespace TeduShop.Data.Reponsitories
 
         public IEnumerable<Post> GetAllByTagPasing(string tag, int pageIndex, int pageSize, out int totalRow)
         {
-            var query = from p in DbContext.Posts
-                        join pt in DbContext.PostTags
-                        on p.Id equals pt.PostId
-                        where pt.TagId == tag && p.Status
-                        orderby p.CreatedDate descending
-                        select p;
+            IQueryable<Post> query = from p in DbContext.Posts
+                                     join pt in DbContext.PostTags
+                                     on p.Id equals pt.PostId
+                                     where pt.TagId == tag && p.Status
+                                     orderby p.CreatedDate descending
+                                     select p;
             totalRow = query.Count();
             query = query.Skip((pageIndex - 1) * pageSize).Take(pageSize);
             return query;
